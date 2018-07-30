@@ -1,0 +1,11 @@
+
+
+origin source => chronos
+ubuntu is ok
+
+But windows cross compile error
+
+swiss-classiccoin:build-aux & depends
+PIVX coin:configure.ac
+
+i dont test, but I think maybe PIVX is good...
