@@ -117,10 +117,10 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60;//60 * 60; // Moonbridge: 1 hr
-        nTargetSpacing = 5;  // Moonbridge: 2 min
-        nMaturity = 5;
-        nMasternodeCollateral = 19000; // 19,000 MBR
+        nTargetTimespan = 60 * 60;//60 * 60; // Moonbridge: 1 hr//???
+        nTargetSpacing = 100;  // Moonbridge: 2 min//???
+        nMaturity = 10;//???
+        nMasternodeCollateral = 19000; // 19,000 MBR//???
         nMasternodeCountDrift = 20;
         nMaxMoneyOut =  600000000LL * COIN;
         nSwiftTxMinFee = 0.01 * COIN;             // 1 CENT or 10000 satoshis
@@ -128,7 +128,7 @@ public:
         nMinRelayTxFeePerK = 0.0001 * COIN;       // .01 CENT or 100 satoshis
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 50;//199;
+        nLastPOWBlock = 199;//???
         nModifierUpdateBlock = 0;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = -1; //Trigger a recalculation of accumulators
@@ -186,11 +186,11 @@ public:
         nZerocoinStartHeight = INT_MAX;
         nZerocoinStartTime = INT_MAX;
 
-        //vSeeds.push_back(CDNSSeedData("0", "174.138.13.145"));             // Primary DNS Seeder
-        vSeeds.push_back(CDNSSeedData("1", "159.65.9.178"));      // Secondary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("0", "174.138.13.145"));   // Primary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("1", "159.65.9.178"));     // Secondary DNS Seeder
         vSeeds.push_back(CDNSSeedData("2", "138.68.4.227"));     // Third DNS Seeder
 
-        // https://en.bitcoin.it/wiki/List_of_address_prefixes
+        // https://en.bitcoin.it/wiki/List_of_address_prefixes//???
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50);     // starts with M
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 63);     // starts with S
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 75);        // starts with X

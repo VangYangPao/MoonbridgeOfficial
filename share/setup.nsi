@@ -10,11 +10,11 @@ SetCompressor /SOLID lzma
 !define URL https://moonbridge.tech
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/ujstar/moonbridge-master/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/ujstar/moonbridge-master/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/media/ujstar/Data/MoonbridgeOfficial/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/media/ujstar/Data/MoonbridgeOfficial/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/ujstar/moonbridge-master/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/media/ujstar/Data/MoonbridgeOfficial/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,7 +22,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "Moonbridge Core"
 !define MUI_FINISHPAGE_RUN $INSTDIR\moonbridge-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/ujstar/moonbridge-master/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/media/ujstar/Data/MoonbridgeOfficial/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,7 +48,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/ujstar/moonbridge-master/moonbridge-${VERSION}-win-setup.exe
+OutFile /media/ujstar/Data/MoonbridgeOfficial/moonbridge-${VERSION}-win-setup.exe
 !if "" == "64"
 InstallDir $PROGRAMFILES64\Moonbridge
 !else
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/ujstar/moonbridge-master/release/moonbridge-qt
-    File /oname=COPYING.txt /home/ujstar/moonbridge-master/COPYING
-    File /oname=readme.txt /home/ujstar/moonbridge-master/doc/README_windows.txt
+    File /media/ujstar/Data/MoonbridgeOfficial/release/moonbridge-qt
+    File /oname=COPYING.txt /media/ujstar/Data/MoonbridgeOfficial/COPYING
+    File /oname=readme.txt /media/ujstar/Data/MoonbridgeOfficial/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/ujstar/moonbridge-master/release/moonbridged
-    File /home/ujstar/moonbridge-master/release/moonbridge-cli
+    File /media/ujstar/Data/MoonbridgeOfficial/release/moonbridged
+    File /media/ujstar/Data/MoonbridgeOfficial/release/moonbridge-cli
     SetOutPath $INSTDIR\doc
-    File /r /home/ujstar/moonbridge-master/doc\*.*
+    File /r /media/ujstar/Data/MoonbridgeOfficial/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
