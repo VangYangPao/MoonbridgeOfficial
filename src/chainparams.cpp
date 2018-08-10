@@ -152,33 +152,7 @@ public:
         genesis.nNonce = 388464;
 
         hashGenesisBlock = genesis.GetHash();
-
-        if(false) {
-            uint256 thash;
-            uint256 hashTarget = uint256().SetCompact(genesis.nBits);
-
-            while(1)
-            {
-                thash=genesis.GetHash();
-                if (thash <= hashTarget)
-                    break;
-                if ((genesis.nNonce & 0xFF) == 0)
-                {
-                    printf("nonce %08X: hash = %s\n",genesis.nNonce, thash.ToString().c_str());
-                }
-                ++genesis.nNonce;
-                if (genesis.nNonce == 0)
-                {
-                    printf("NONCE WRAPPED, incrementing time\n");
-                    ++genesis.nTime;
-                }
-            }
-            printf("genesis.nTime = %u;\n",genesis.nTime);
-            printf("genesis.nNonce = %u;\n",genesis.nNonce);
-            printf("assert(genesis.hashMerkleRoot == uint256(\"0x%s\"));\n",genesis.hashMerkleRoot.ToString().c_str());
-            printf("//genesis hash: 0x%s\n", genesis.GetHash().ToString().c_str());
-            exit(1);
-        }
+        
         assert(genesis.hashMerkleRoot == uint256("0x0869e8b10bb0eb20e3feebcc8d9906ab2c2d6a9209e78e8acc7a31d716330b48"));
         assert(hashGenesisBlock == uint256("0x000002414b0c6ed5e19f048338ddc7eeac4e725da67f27c4980383d8ed57d1c3"));
 
